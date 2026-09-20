@@ -1,4 +1,21 @@
-theme: jekyll-theme-minimal
 title: Polina Lee
-description: Bookmark this to keep an eye on my project updates!
-websiteTitle: Polina Lee
+description: >-
+  Biomedical engineering — electrochemical and optical sensing for
+  point-of-care diagnostics in emergency and low-resource settings.
+theme: minima
+
+# Controls which pages appear in the top nav, and in what order.
+# index.md is deliberately absent — the site title links home.
+header_pages:
+  - projects.md
+  - methods.md
+
+# Shown in minima's footer. Leave github_username; drop email if you
+# prefer not to publish it in the footer as well as on the home page.
+github_username: polinalee
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
