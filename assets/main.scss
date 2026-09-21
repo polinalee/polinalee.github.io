@@ -1,0 +1,224 @@
+---
+# Empty front matter — required so Jekyll compiles this SCSS.
+# This file overrides minima's own assets/main.scss.
+---
+
+@import "minima";
+
+/* ---- Header: three centered nav labels, no site title ---- */
+
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid $grey-color-light;
+  min-height: auto;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;   /* centers the three labels */
+  gap: 2.5rem;
+  padding: 1rem 0;
+  float: none;
+  line-height: normal;
+  border: none;
+  background: none;
+
+  .page-link {
+    color: $grey-color-dark;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    margin-left: 0;           /* undo minima's left-aligned spacing */
+
+    &.active {
+      font-weight: 600;
+      border-bottom: 2px solid $grey-color-dark;
+    }
+  }
+}
+
+/* ---- Wider content on Projects / Methods (side margins halved) ----
+   Default margin each side = (100vw - 800px) / 2.
+   Half of that = (100vw - 800px) / 4, so width = 50vw + 400px. */
+
+@media screen and (min-width: 800px) {
+  body.wide .wrapper {
+    max-width: calc(50vw + 400px);
+  }
+}
+
+/* ---- Home: photo + name on the left, pitch on the right ---- */
+
+.intro {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.intro-photo img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.intro-name {
+  margin: 0.75rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.intro-text > :first-child { margin-top: 0; }
+
+@media screen and (max-width: 700px) {
+  .intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .intro-photo { max-width: 200px; }
+}
+
+/* ---- Projects: left-to-right progression cells ---- */
+
+.progression {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.progression figure {
+  margin: 0;
+}
+
+.progression img {
+  width: 100%;
+  display: block;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+}
+
+.progression figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: $grey-color-dark;
+}
+
+.progression .step-label {
+  display: block;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .progression { grid-template-columns: 1fr; }
+}
+
+/* 3x1 icon row standing in for the Methods image in a progression strip */
+
+.method-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+  padding: 1.25rem 0.5rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+}
+
+.method-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: $grey-color-dark;
+
+  svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.method-icon-label {
+  font-size: 0.72rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.project-tagline {
+  margin-top: -0.5rem;
+  color: $grey-color-dark;
+  font-style: italic;
+}
+
+/* ---- Methods page: weighted mosaic, wet lab spanning full width ---- */
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.method-card {
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+
+  h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    margin-bottom: 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.method-card--wide {
+  grid-column: 1 / -1;   /* the depth lives here, so it gets the full row */
+}
+
+.method-lead {
+  font-weight: 500;
+  color: $text-color;
+}
+
+@media screen and (max-width: 700px) {
+  .method-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Footer: four buttons, no links wired up yet ---- */
+
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: 1.5rem 0;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-btn {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: $grey-color-dark;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $grey-color;
+    color: $text-color;
+  }
+}

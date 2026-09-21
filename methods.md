@@ -1,38 +1,44 @@
 ---
-layout: page
+layout: default
 title: Methods
 permalink: /methods/
+body_class: wide
 ---
 
-Techniques I have personally run, grouped by capability.
+# Methods
 
-<!-- Only list what you've actually operated. This page's value is that a PI can
-     read it and know what you could start doing in their lab on day one. -->
+Techniques I understand and have built prototypes and experiments with, grouped
+by capability.
 
-## Electroanalytical
+<!-- Weighted mosaic: the wet lab card spans the full width because that is
+     where the depth is. Only list what you have actually operated — a PI should
+     be able to read this and know what you could start doing on day one. -->
 
-Cyclic voltammetry · square-wave voltammetry · chronoamperometry ·
-chronocoulometry · open-circuit potentiometry. Screen-printed electrode
-workflows using PSTrace.
+<div class="method-grid">
 
-## Optical
+  <section class="method-card method-card--wide">
+    <h2>Wet lab</h2>
+    <p class="method-lead">Electroanalytical work on screen-printed electrodes
+    using PSTrace — cyclic voltammetry, square-wave voltammetry,
+    chronoamperometry, chronocoulometry and open-circuit potentiometry.</p>
+    <p>UV-Vis spectrophotometry, including its use as a plasma free-hemoglobin
+    assay for hemolysis quantification.</p>
+    <p>Sterile technique · pipetting · biosafety hood and containment work ·
+    general assay development.</p>
+  </section>
 
-UV-Vis spectrophotometry — including its use as a plasma free-hemoglobin assay
-for hemolysis quantification.
+  <section class="method-card">
+    <h2>Fabrication</h2>
+    <p>Arduino and microcontroller instrumentation · PCB design in Fusion 360 ·
+    SolidWorks · 3D printing · machine shop.</p>
+  </section>
 
-## Fabrication and instrumentation
+  <section class="method-card">
+    <h2>Computation</h2>
+    <p>MATLAB and Simulink · Python (NumPy, SciPy, pandas) · R · Unix shell.</p>
+  </section>
 
-Arduino and microcontroller instrumentation · PCB design in Fusion 360 ·
-SolidWorks · 3D printing · machine shop.
-
-## Computational
-
-MATLAB and Simulink · Python (NumPy, SciPy, pandas) · R · Unix shell.
-
-## Wet lab
-
-Sterile technique · pipetting · biosafety hood and containment work · general
-assay development.
+</div>
 
 <!-- TODO: add anything acquired since Aug 2026 — and delete anything here you
      wouldn't be comfortable being asked about in an interview. -->

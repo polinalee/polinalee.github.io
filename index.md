@@ -1,32 +1,27 @@
 ---
-layout: page
+layout: default
 title: Home
 permalink: /
 ---
 
-Senior biomedical engineering student at UT Austin. I build **electrochemical and
-optical sensing systems for diagnostics that work outside the hospital** — in
-ambulances, disaster response, and low-resource clinics.
+<div class="intro">
+  <div class="intro-photo">
+    <!-- TODO: drop a headshot at assets/img/portrait.jpg (square crop, ~600x600). -->
+    <img src="{{ '/assets/img/portrait.jpg' | relative_url }}" alt="Polina Lee">
+    <p class="intro-name">Polina Lee</p>
+  </div>
+  <div class="intro-text">
+    <p>4th year biomedical engineering undergraduate at The University of Texas at
+    Austin. I build <strong>electrochemical and optical sensing systems for
+    diagnostics that work outside the hospital</strong> — in ambulances, disaster
+    response, and low-resource clinics.</p>
+    <p><strong>Looking for</strong> — full time graduate or industry positions in
+    point of need medicine or microplastics research.</p>
+  </div>
+</div>
 
-<!-- TODO: confirm the display name in _config.yml (currently "Polina Lee"). -->
+## Strongest projects
 
-**Currently** — <!-- TODO: one line. e.g. "Undergraduate researcher on RealCooL,
-applying rapid thermal control to field blood transfusion. Graduating May 2027." -->
-
-**Looking for** — <!-- TODO: one line. e.g. "PhD positions in point-of-care
-diagnostics and acute-care sensing." Be specific; this is the line professors
-scan for fit. -->
-
-## Selected work
-
-- **[Rapid blood warming for transfusion](/projects/#realcool)** — <!-- TODO: one-line outcome -->
-- **[BME 370 senior design](/projects/#capstone)** — <!-- TODO: one-line outcome -->
-- **[Electrochemical biosensing](/projects/#electrochemical-sensing)** — <!-- TODO: one-line outcome -->
-
-## Contact
-
-- <!-- TODO: email. Consider a dedicated address rather than your primary
-     personal one — this page will be scraped. -->
-- [GitHub](https://github.com/polinalee)
-- [CV (PDF)](/cv.pdf) <!-- TODO: drop cv.pdf in the repo root, or remove this line -->
-- Austin, TX
+- **[Rapid blood warming for transfusion]({{ '/projects/#realcool' | relative_url }})** — <!-- TODO: one-line outcome -->
+- **[BME 370 senior design]({{ '/projects/#capstone' | relative_url }})** — <!-- TODO: one-line outcome -->
+- **[Electrochemical biosensing]({{ '/projects/#electrochemical-sensing' | relative_url }})** — <!-- TODO: one-line outcome -->

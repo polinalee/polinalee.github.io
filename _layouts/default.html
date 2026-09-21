@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body class="{{ page.body_class }}">
+
+    <header class="site-header" role="banner">
+      <nav class="site-nav">
+        <a class="page-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        <a class="page-link{% if page.url contains '/projects' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a class="page-link{% if page.url contains '/methods' %} active{% endif %}" href="{{ '/methods/' | relative_url }}">Methods</a>
+      </nav>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <!-- TODO: add href="..." to each button when the destinations exist.
+           LinkedIn profile · ORCID iD · CV PDF · mailto: address. -->
+      <div class="footer-buttons">
+        <span class="footer-btn">LinkedIn</span>
+        <span class="footer-btn">ORCID</span>
+        <span class="footer-btn">PDF</span>
+        <span class="footer-btn">Email</span>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
