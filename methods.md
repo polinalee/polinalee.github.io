@@ -16,7 +16,7 @@ by capability.
 
 <div class="method-grid">
 
-  <section class="method-card method-card--wide">
+<section class="method-card method-card--wide">
     <h2>Wet lab</h2>
     <p class="method-lead">Electroanalytical work on screen-printed electrodes
     using PSTrace — cyclic voltammetry, square-wave voltammetry,
@@ -27,18 +27,13 @@ by capability.
     general assay development.</p>
   </section>
 
-  <section class="method-card">
+<section class="method-card">
     <h2>Fabrication</h2>
     <p>Arduino and microcontroller instrumentation · PCB design in Fusion 360 ·
     SolidWorks · 3D printing · machine shop.</p>
   </section>
 
-  <section class="method-card">
+<section class="method-card">
     <h2>Computation</h2>
     <p>MATLAB and Simulink · Python (NumPy, SciPy, pandas) · R · Unix shell.</p>
   </section>
-
-</div>
-
-<!-- TODO: add anything acquired since Aug 2026 — and delete anything here you
-     wouldn't be comfortable being asked about in an interview. -->
