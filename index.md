@@ -12,16 +12,14 @@ permalink: /
   </div>
   <div class="intro-text">
     <p>4th year biomedical engineering undergraduate at The University of Texas at
-    Austin. I build <strong>electrochemical and optical sensing systems for
-    diagnostics that work outside the hospital</strong> — in ambulances, disaster
-    response, and low-resource clinics.</p>
+    Austin. I have experience in <strong>electrochemical biomarker sensing, MRI phantoms, and ML-based dementia detection.</strong></p>
     <p><strong>Looking for</strong> — full time graduate or industry positions in
-    point of need medicine or microplastics research.</p>
+    point-of-need medicine or microplastics research.</p>
   </div>
 </div>
 
 ## Strongest projects
 
-- **[Rapid blood warming for transfusion]({{ '/projects/#realcool' | relative_url }})** — <!-- TODO: one-line outcome -->
-- **[BME 370 senior design]({{ '/projects/#capstone' | relative_url }})** — <!-- TODO: one-line outcome -->
-- **[Electrochemical biosensing]({{ '/projects/#electrochemical-sensing' | relative_url }})** — <!-- TODO: one-line outcome -->
+- **[Gait-based random forest screen for early cognitive impairment]({{ '/projects/#chang' | relative_url }})** — Chang Research Team, UT Austin
+- **[Assay and signal model for a printed-electrode protein sensor]({{ '/projects/#tetrel' | relative_url }})** — Tetrel Health Inc.
+- **[Multimodal phantom for preclinical-scale MRI validation]({{ '/projects/#afrl' | relative_url }})** — Air Force Research Laboratory
