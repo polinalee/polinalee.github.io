@@ -4,18 +4,18 @@ description: >-
   point-of-care diagnostics in emergency and low-resource settings.
 theme: minima
 
-# Controls which pages appear in the top nav, and in what order.
-# index.md is deliberately absent — the site title links home.
-header_pages:
-  - projects.md
-  - methods.md
-
-# Shown in minima's footer. Leave github_username; drop email if you
-# prefer not to publish it in the footer as well as on the home page.
-github_username: polinalee
+# Nav is hardcoded in _layouts/default.html now (Home / Projects / Methods,
+# centered), so header_pages is no longer read. github_username is gone —
+# the custom footer replaces minima's social links.
 
 plugins:
   - jekyll-feed
 
+# Setting `exclude` REPLACES Jekyll's defaults rather than adding to them, so
+# the Gemfile entries have to be restored by hand — otherwise they get copied
+# into _site and served at /Gemfile.
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

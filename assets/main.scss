@@ -82,8 +82,10 @@
   display: block;
 }
 
+/* Now the first line of .intro-text (above the blurb), not a caption under the
+   photo — so it needs bottom spacing instead of top. */
 .intro-name {
-  margin: 0.75rem 0 0;
+  margin: 0 0 0.6rem;
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.2;
@@ -94,6 +96,47 @@
 @media screen and (max-width: 700px) {
   .intro { grid-template-columns: 1fr; gap: 1.5rem; }
   .intro-photo { max-width: 200px; }
+}
+
+/* ---- Home: three clickable project cards ---- */
+
+.proj-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+/* The <a> IS the card, so the image is part of the click target. Colors are
+   set explicitly to stop minima styling the whole card like body-text link. */
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  color: $text-color;
+  text-decoration: none;
+
+  &:visited { color: $text-color; }
+
+  &:hover {
+    border-color: $grey-color;
+    text-decoration: none;
+
+    .proj-card-title { text-decoration: underline; }
+  }
+}
+
+.proj-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 700px) {
+  .proj-cards { grid-template-columns: 1fr; }
 }
 
 /* ---- Projects: left-to-right progression cells ---- */
@@ -186,94 +229,115 @@
   .tl-entry:last-child .tl-body { padding-bottom: 0; }
 }
 
-/* minmax floor is 170px so all three cells of the Problem -> Methods -> Built
-   bar stay on one row inside the timeline's body column. */
+/* ---- Projects: three-column Problem / Methods / Built strip ----
+   The middle column is widened because it carries three sub-cells; 1.35fr is
+   the smallest value that still leaves the method labels room to breathe. */
+
 .progression {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: 1fr 1.35fr 1fr;
   gap: 1.25rem;
   margin: 1rem 0 0;
+  align-items: start;
 }
 
-.progression figure {
+.prog-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Boxed, deliberately NOT bold — it has to read as a column label rather than
+   compete with the project title above it. */
+.prog-head {
   margin: 0;
-}
-
-.progression img {
-  width: 100%;
-  display: block;
+  padding: 0.3rem 0.5rem;
   border: 1px solid $grey-color-light;
   border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  color: $grey-color-dark;
 }
 
-.progression figcaption {
-  margin-top: 0.6rem;
+/* Holds the image's footprint (and the border) whether or not the file exists
+   yet, so a missing asset can't collapse the row. */
+.img-slot {
+  aspect-ratio: 4 / 3;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.prog-text {
+  margin: 0;
   font-size: 0.9rem;
   line-height: 1.45;
   color: $grey-color-dark;
 }
 
-.progression .step-label {
-  display: block;
-  font-weight: 600;
-  color: $text-color;
-  margin-bottom: 0.2rem;
+/* Methods bar: three cells, square image slot over a short label. */
+
+.method-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
-@media screen and (max-width: 700px) {
-  .progression { grid-template-columns: 1fr; }
-}
-
-/* Methods cell: stands where an image would, so it borrows the image's border
-   and a 4:3 box to keep the three cells of the bar the same height. */
-
-.method-chips {
+.method-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  aspect-ratio: 4 / 3;
-  padding: 0.75rem;
-  border: 1px solid $grey-color-light;
-  border-radius: 4px;
-  text-align: center;
+  gap: 0.35rem;
+
+  .img-slot { aspect-ratio: 1 / 1; }
 
   span {
-    font-size: 0.85rem;
-    line-height: 1.3;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    text-align: center;
     color: $grey-color-dark;
   }
 }
 
-/* 3x1 icon row standing in for the Methods image in a progression strip */
+/* Spans the full width of the methods bar (all three sub-boxes). Built as a
+   stretching line plus a fixed-size head rather than one scaled <svg>, because
+   stretching a single svg to full width would distort the arrowhead. */
 
-.method-icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  align-items: start;
-  padding: 1.25rem 0.5rem;
-  border: 1px solid $grey-color-light;
-  border-radius: 4px;
-}
-
-.method-icon {
+.prog-arrow {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  color: $grey-color-dark;
-
-  svg {
-    width: 34px;
-    height: 34px;
-  }
+  color: $grey-color;
 }
 
-.method-icon-label {
-  font-size: 0.72rem;
-  line-height: 1.2;
-  text-align: center;
+.prog-arrow-line {
+  flex: 1;
+  height: 0;
+  border-top: 1.5px solid currentColor;
+}
+
+.prog-arrow-head {
+  flex: none;
+  width: 8px;
+  height: 12px;
+  margin-left: -1px;   /* closes the hairline gap where the shaft meets the head */
+}
+
+@media screen and (max-width: 700px) {
+  .progression { grid-template-columns: 1fr; }
+
+  /* Stacked columns read top-to-bottom, so the arrow has to turn with them. */
+  .prog-arrow {
+    transform: rotate(90deg);
+    width: 2.5rem;
+    margin: 0.75rem auto;
+  }
 }
 
 .project-tagline {
