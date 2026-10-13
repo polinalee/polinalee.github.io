@@ -261,19 +261,45 @@
 }
 
 /* Holds the image's footprint (and the border) whether or not the file exists
-   yet, so a missing asset can't collapse the row. */
+   yet, so a missing asset can't collapse the row.
+
+   `contain` (not `cover`) plus a white slot background is what letterboxes the
+   source images instead of cropping them — the incoming files range from 1920x1080
+   to a 132x768 electrode photo, so cropping to the slot would decapitate most of
+   them. The same white background shows through transparent PNGs. */
 .img-slot {
   aspect-ratio: 4 / 3;
   border: 1px solid $grey-color-light;
   border-radius: 4px;
   overflow: hidden;
+  background: #fff;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
+}
+
+/* Opt-in crop, for images whose framing can take it — they fill the slot edge
+   to edge instead of being letterboxed. `cover` overflows whichever axis it has
+   to: a portrait source fills the width and loses top/bottom, a wide source
+   fills the height and loses left/right. The modifier only picks the anchor.
+   Left as separate classes rather than a default because the other images
+   (plots, a tall electrode) lose their subject the moment they're cropped. */
+.img-slot--fill img { object-fit: cover; }
+
+/* Keeps the top of the frame and crops upward from the bottom. */
+.img-slot--fill-top img {
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+/* Keeps the left of the frame and crops in from the right. */
+.img-slot--fill-left img {
+  object-fit: cover;
+  object-position: 0 50%;
 }
 
 .prog-text {
@@ -281,6 +307,32 @@
   font-size: 0.9rem;
   line-height: 1.45;
   color: $grey-color-dark;
+}
+
+/* Stands in for an image that isn't available — withheld, or not made yet.
+   Centred in the slot and letter-spaced so it reads as a status marker rather
+   than a caption. Replaces the <img> entirely, because a src that 404s renders
+   the browser's broken-image glyph (which alt="" does not suppress). */
+.img-slot--note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding: 0 0.3rem;
+    color: $grey-color;
+  }
+}
+
+/* A method cell is about a third the width of a Problem/Built slot, so the
+   same label has to come down a step to fit on one line there. */
+.method-item .img-slot--note span {
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
 }
 
 /* Methods bar: three cells, square image slot over a short label. */
@@ -345,6 +397,30 @@
   font-size: 0.92rem;
   color: $grey-color-dark;
   font-style: italic;
+
+  /* Keep org links in the tagline's own grey instead of minima's link blue,
+     which would otherwise pull the eye away from the project title above. */
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: $grey-color-light;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $text-color;
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+/* A factual aside under the tagline (e.g. a patent filing). Matches .prog-text's
+   size and colour so it reads as body copy, but stays upright — the tagline
+   above it is italic, and a second italic line would blur the two together. */
+.entry-note {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: $grey-color-dark;
 }
 
 /* ---- Methods page: weighted mosaic, wet lab spanning full width ---- */

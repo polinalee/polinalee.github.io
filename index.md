@@ -20,22 +20,23 @@ permalink: /
 ## Strongest projects
 
 <!-- The whole card is the <a>, so image and title are one click target.
-     Needs assets/img/card-{chang,tetrel,afrl}.jpg (4:3). -->
+     Thumbnails deliberately reuse the same files as the Projects-page slots
+     rather than separate card-*.jpg crops, so there's one copy to update. -->
 
 <div class="proj-cards">
 
   <a class="proj-card" href="{{ '/projects/#chang' | relative_url }}">
-    <div class="img-slot"><img src="{{ '/assets/img/card-chang.jpg' | relative_url }}" alt=""></div>
+    <div class="img-slot"><img src="{{ '/assets/img/signals_built.png' | relative_url }}" alt=""></div>
     <span class="proj-card-title">Gait-based random forest screen for early cognitive impairment</span>
   </a>
 
   <a class="proj-card" href="{{ '/projects/#tetrel' | relative_url }}">
-    <div class="img-slot"><img src="{{ '/assets/img/card-tetrel.jpg' | relative_url }}" alt=""></div>
+    <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/tetrel_built.png' | relative_url }}" alt=""></div>
     <span class="proj-card-title">Assay and signal model for a printed-electrode protein sensor</span>
   </a>
 
   <a class="proj-card" href="{{ '/projects/#afrl' | relative_url }}">
-    <div class="img-slot"><img src="{{ '/assets/img/card-afrl.jpg' | relative_url }}" alt=""></div>
+    <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/afrl_methods_intensity.png' | relative_url }}" alt=""></div>
     <span class="proj-card-title">Multimodal phantom for preclinical-scale MRI validation</span>
   </a>
 

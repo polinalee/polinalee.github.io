@@ -9,10 +9,12 @@ body_class: wide
      ("[product] for [problem]"), environment subtitle, and a three-column
      Problem / Methods / Built strip. Newest at top.
 
-     Every <img> is a placeholder slot sized by its .img-slot wrapper, so the
-     layout holds its shape until the real files land in assets/img/.
-     Needed per entry: {slug}-problem.jpg, {slug}-built.jpg (4:3), and
-     {slug}-method-1/2/3.jpg (square). -->
+     Image filenames keep their source prefixes (senior_ = capstone,
+     signals_ = Chang, tetrel_, phantom_/afrl_ = AFRL) so provenance stays
+     obvious. Slots whose file doesn't exist yet are left pointing at a
+     {slug}-* placeholder name; .img-slot holds the footprint either way.
+     Still needed: capstone-method-1/2/3, capstone-built, chang-problem,
+     tetrel-method-3, afrl-built. -->
 
 <div class="timeline">
 
@@ -22,12 +24,12 @@ body_class: wide
     </div>
     <div class="tl-body">
       <h2><span class="tl-ongoing">[ONGOING]</span> Thoracoabdominal phantom for CT- and ultrasound-guided drainage training</h2>
-      <p class="project-tagline">Senior BME Capstone · The University of Texas at Austin</p>
+      <p class="project-tagline">Senior BME Capstone · <a href="https://dellmed.utexas.edu/">Dell Medical School at the University of Texas at Austin</a></p>
       <div class="progression">
 
         <div class="prog-col">
           <p class="prog-head">Problem</p>
-          <div class="img-slot"><img src="{{ '/assets/img/capstone-problem.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/senior_problem.png' | relative_url }}" alt=""></div>
           <p class="prog-text">Residents have no durable phantom for practicing image-guided fluid drainage.</p>
         </div>
 
@@ -35,15 +37,15 @@ body_class: wide
           <p class="prog-head">Methods</p>
           <div class="method-bar">
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/capstone-method-1.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
               <span>Contrast handling</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/capstone-method-2.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
               <span>Polymer casting</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/capstone-method-3.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
               <span>CT + ultrasound</span>
             </div>
           </div>
@@ -57,7 +59,7 @@ body_class: wide
 
         <div class="prog-col">
           <p class="prog-head">Built</p>
-          <div class="img-slot"><img src="{{ '/assets/img/capstone-built.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
           <p class="prog-text">Self-healing shell with interchangeable liver, kidney, and lung inserts visible on both modalities.</p>
         </div>
 
@@ -71,12 +73,12 @@ body_class: wide
     </div>
     <div class="tl-body">
       <h2><span class="tl-ongoing">[ONGOING]</span> Gait-based random forest screen for early cognitive impairment</h2>
-      <p class="project-tagline">Chang Research Team · The University of Texas at Austin</p>
+      <p class="project-tagline">Undergraduate Researcher · <a href="https://jtkchang.github.io/">Chang Research Team</a> · The University of Texas at Austin</p>
       <div class="progression">
 
         <div class="prog-col">
           <p class="prog-head">Problem</p>
-          <div class="img-slot"><img src="{{ '/assets/img/chang-problem.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot"><img src="{{ '/assets/img/signals_problem.png' | relative_url }}" alt=""></div>
           <p class="prog-text">No passive, non-invasive model predicts mild cognitive impairment early.</p>
         </div>
 
@@ -84,15 +86,15 @@ body_class: wide
           <p class="prog-head">Methods</p>
           <div class="method-bar">
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/chang-method-1.jpg' | relative_url }}" alt=""></div>
-              <span>Data preprocessing</span>
-            </div>
-            <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/chang-method-2.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/signals_methods_selection.png' | relative_url }}" alt=""></div>
               <span>Feature selection</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/chang-method-3.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/signals_methods_stats.png' | relative_url }}" alt=""></div>
+              <span>Statistical tests</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/signals_methods_ml.png' | relative_url }}" alt=""></div>
               <span>Machine learning</span>
             </div>
           </div>
@@ -106,8 +108,8 @@ body_class: wide
 
         <div class="prog-col">
           <p class="prog-head">Built</p>
-          <div class="img-slot"><img src="{{ '/assets/img/chang-built.jpg' | relative_url }}" alt=""></div>
-          <p class="prog-text">Random forest classifiers that flag fall history from passively collected gait data.</p>
+          <div class="img-slot"><img src="{{ '/assets/img/signals_built.png' | relative_url }}" alt=""></div>
+          <p class="prog-text">Random forest classifiers that identify patients with a history of falls using passively collected gait data.</p>
         </div>
 
       </div>
@@ -120,12 +122,13 @@ body_class: wide
     </div>
     <div class="tl-body">
       <h2>Assay and signal model for a printed-electrode protein sensor</h2>
-      <p class="project-tagline">Electrochemical Sensor Development Intern · Tetrel Health Inc.</p>
+      <p class="project-tagline">Electrochemical Sensor Development Intern · <a href="https://www.tetrelhealth.com/">Tetrel Health Inc.</a></p>
+      <p class="entry-note">Provisional patent application filed with USPTO on 8 October 2026, Serial No. 64/172,310, titled “Analyte-Responsive Protein Switches and Electrochemical Diagnostic Systems.”</p>
       <div class="progression">
 
         <div class="prog-col">
           <p class="prog-head">Problem</p>
-          <div class="img-slot"><img src="{{ '/assets/img/tetrel-problem.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--fill-top"><img src="{{ '/assets/img/tetrel_problem.png' | relative_url }}" alt=""></div>
           <p class="prog-text">The low-temperature printed electrode had no settled assay or signal model.</p>
         </div>
 
@@ -133,16 +136,16 @@ body_class: wide
           <p class="prog-head">Methods</p>
           <div class="method-bar">
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/tetrel-method-1.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/tetrel_methods_orp.jpg' | relative_url }}" alt=""></div>
               <span>ORP handling</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/tetrel-method-2.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/tetrel_methods_voltammetry.png' | relative_url }}" alt=""></div>
               <span>Voltammetry</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/tetrel-method-3.jpg' | relative_url }}" alt=""></div>
-              <span>Signal modeling</span>
+              <div class="img-slot"><img src="{{ '/assets/img/tetrel_methods_chronoamperom.png' | relative_url }}" alt=""></div>
+              <span>Amperometry</span>
             </div>
           </div>
           <div class="prog-arrow" aria-hidden="true">
@@ -155,7 +158,7 @@ body_class: wide
 
         <div class="prog-col">
           <p class="prog-head">Built</p>
-          <div class="img-slot"><img src="{{ '/assets/img/tetrel-built.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/tetrel_built.png' | relative_url }}" alt=""></div>
           <p class="prog-text">Standardized CV, CA, and OCP protocols plus a technician-friendly GUI.</p>
         </div>
 
@@ -169,12 +172,12 @@ body_class: wide
     </div>
     <div class="tl-body">
       <h2>Multimodal phantom for preclinical-scale MRI validation</h2>
-      <p class="project-tagline">Repperger Research Intern · Air Force Research Laboratory, 711th Human Performance Wing</p>
+      <p class="project-tagline">Repperger Research Intern · <a href="https://www.afrl.af.mil/711HPW/">Air Force Research Laboratory, 711th Human Performance Wing</a></p>
       <div class="progression">
 
         <div class="prog-col">
           <p class="prog-head">Problem</p>
-          <div class="img-slot"><img src="{{ '/assets/img/afrl-problem.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--fill-left"><img src="{{ '/assets/img/phantom_problem.jpg' | relative_url }}" alt=""></div>
           <p class="prog-text">No phantom existed for this MRI modality at preclinical scale.</p>
         </div>
 
@@ -182,15 +185,15 @@ body_class: wide
           <p class="prog-head">Methods</p>
           <div class="method-bar">
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/afrl-method-1.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/phantom_methods_sla.png' | relative_url }}" alt=""></div>
               <span>Stereolithography</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/afrl-method-2.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot"><img src="{{ '/assets/img/phantom_methods_handling.jpg' | relative_url }}" alt=""></div>
               <span>Contrast handling</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/afrl-method-3.jpg' | relative_url }}" alt=""></div>
+              <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/afrl_methods_intensity.png' | relative_url }}" alt=""></div>
               <span>Intensity analysis</span>
             </div>
           </div>
@@ -204,7 +207,7 @@ body_class: wide
 
         <div class="prog-col">
           <p class="prog-head">Built</p>
-          <div class="img-slot"><img src="{{ '/assets/img/afrl-built.jpg' | relative_url }}" alt=""></div>
+          <div class="img-slot img-slot--note"><span>CONFIDENTIAL</span></div>
           <p class="prog-text">Multimodal contrast-agent phantom scanned and quantified at preclinical scale.</p>
         </div>
 

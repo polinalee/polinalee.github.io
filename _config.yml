@@ -19,3 +19,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  # Staging folder for source images; the ones in use are copied into
+  # assets/img/, so publishing this too would just duplicate them.
+  - potential_imgs/
+  # Local dev helper — nothing to serve from it.
+  - preview.sh
