@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Hardcoded on purpose: the browser tab must read "Polina Lee" on every
+         page, so this is NOT "Projects | Polina Lee". -->
+    <title>Polina Lee</title>
+
+    <meta name="description" content="Biomedical engineering — electrochemical and optical sensing for point-of-care diagnostics in emergency and low-resource settings.">
+    <link rel="stylesheet" href="/assets/main.css">
+  </head>
+
+  <body class="wide">
+
+    <header class="site-header" role="banner">
+      <nav class="site-nav">
+        <a class="page-link" href="/">Home</a>
+        <a class="page-link active" href="/projects/">Projects</a>
+        <a class="page-link" href="/methods/">Methods</a>
+      </nav>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- Entry format: date on the timeline rail at left, then title
+     ("[product] for [problem]"), environment subtitle, and a three-column
+     Problem / Methods / Built strip. Newest at top.
+
+     Image filenames keep their source prefixes (senior_ = capstone,
+     signals_ = Chang, tetrel_, phantom_/afrl_ = AFRL) so provenance stays
+     obvious. Slots whose file doesn't exist yet are left pointing at a
+     {slug}-* placeholder name; .img-slot holds the footprint either way.
+     Still needed: capstone-method-1/2/3, capstone-built, chang-problem,
+     tetrel-method-3, afrl-built. -->
+
+<div class="timeline">
+
+  <section class="tl-entry" id="capstone">
+    <div class="tl-when">
+      <span class="tl-date">Aug 2026 – May 2027</span>
+    </div>
+    <div class="tl-body">
+      <h2><span class="tl-ongoing">[ONGOING]</span> Thoracoabdominal phantom for CT- and ultrasound-guided drainage training</h2>
+      <p class="project-tagline">VentureWell Stage 1 E-Team Program Technical Lead · <a href="https://dellmed.utexas.edu/">Dell Medical School at the University of Texas at Austin</a></p>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot img-slot--fill"><img src="/assets/img/senior_problem.png" alt="" /></div>
+          <p class="prog-text">Residents have no durable phantom for practicing image-guided fluid drainage.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
+              <span>Contrast handling</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
+              <span>Polymer casting</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
+              <span>CT + ultrasound</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot img-slot--note"><span>IN PROGRESS</span></div>
+          <p class="prog-text">Self-healing shell with interchangeable liver, kidney, and lung inserts visible on both modalities.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tl-entry" id="chang">
+    <div class="tl-when">
+      <span class="tl-date">Dec 2024 – Present</span>
+    </div>
+    <div class="tl-body">
+      <h2><span class="tl-ongoing">[ONGOING]</span> Gait-based random forest screen for early cognitive impairment</h2>
+      <p class="project-tagline">Undergraduate Researcher · <a href="https://jtkchang.github.io/">Chang Research Team</a> · The University of Texas at Austin</p>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot"><img src="/assets/img/signals_problem.png" alt="" /></div>
+          <p class="prog-text">No passive, non-invasive model predicts mild cognitive impairment early.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/signals_methods_selection.png" alt="" /></div>
+              <span>Feature selection</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/signals_methods_stats.png" alt="" /></div>
+              <span>Statistical tests</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/signals_methods_ml.png" alt="" /></div>
+              <span>Machine learning</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot"><img src="/assets/img/signals_built.png" alt="" /></div>
+          <p class="prog-text">Random forest classifiers that identify patients with a history of falls using passively collected gait data.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tl-entry" id="tetrel">
+    <div class="tl-when">
+      <span class="tl-date">May – Aug 2026</span>
+    </div>
+    <div class="tl-body">
+      <h2>Assay and signal model for a printed-electrode protein sensor</h2>
+      <p class="project-tagline">Electrochemical Sensor Development Intern · <a href="https://www.tetrelhealth.com/">Tetrel Health Inc.</a></p>
+      <p class="entry-note">Provisional patent application filed with USPTO on 8 October 2026, Serial No. 64/172,310, titled “Analyte-Responsive Protein Switches and Electrochemical Diagnostic Systems.”</p>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot img-slot--fill-top"><img src="/assets/img/tetrel_problem.png" alt="" /></div>
+          <p class="prog-text">The low-temperature printed electrode had no settled assay or signal model.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/tetrel_methods_orp.jpg" alt="" /></div>
+              <span>ORP handling</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/tetrel_methods_voltammetry.png" alt="" /></div>
+              <span>Voltammetry</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/tetrel_methods_chronoamperom.png" alt="" /></div>
+              <span>Amperometry</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot img-slot--fill"><img src="/assets/img/tetrel_built.png" alt="" /></div>
+          <p class="prog-text">Standardized CV, CA, and OCP protocols plus a technician-friendly GUI.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tl-entry" id="afrl">
+    <div class="tl-when">
+      <span class="tl-date">Jun – Aug 2025</span>
+    </div>
+    <div class="tl-body">
+      <h2>Multimodal phantom for preclinical-scale MRI validation</h2>
+      <p class="project-tagline">Repperger Research Intern · <a href="https://www.afrl.af.mil/711HPW/">Air Force Research Laboratory, 711th Human Performance Wing</a></p>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot img-slot--fill-left"><img src="/assets/img/phantom_problem.jpg" alt="" /></div>
+          <p class="prog-text">No phantom existed for this MRI modality at preclinical scale.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/phantom_methods_sla.png" alt="" /></div>
+              <span>Stereolithography</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="/assets/img/phantom_methods_handling.jpg" alt="" /></div>
+              <span>Contrast handling</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot img-slot--fill"><img src="/assets/img/afrl_methods_intensity.png" alt="" /></div>
+              <span>Intensity analysis</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot img-slot--note"><span>CONFIDENTIAL</span></div>
+          <p class="prog-text">Multimodal contrast-agent phantom scanned and quantified at preclinical scale.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <!-- TODO: add href="mailto:..." to the Email button.
+           No `download` attribute on the resume on purpose — it opens in the
+           browser's PDF viewer, which has its own download control. -->
+      <div class="footer-buttons">
+        <a class="footer-btn" href="https://www.linkedin.com/in/polina-lee">LinkedIn</a>
+        <a class="footer-btn" href="https://orcid.org/0009-0008-2523-4328">ORCID</a>
+        <a class="footer-btn" href="/assets/PolinaLee_BME_UTAustin_Senior2027.pdf"
+           target="_blank" rel="noopener">View Resume PDF</a>
+        <span class="footer-btn">Email</span>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
