@@ -9,12 +9,14 @@ body_class: wide
      ("[product] for [problem]"), environment subtitle, and a three-column
      Problem / Methods / Built strip. Newest at top.
 
-     Image filenames keep their source prefixes (senior_ = capstone,
-     signals_ = Chang, tetrel_, phantom_/afrl_ = AFRL) so provenance stays
-     obvious. Slots with no image yet use .img-slot--note with a text marker
-     instead of an <img>, because a src that 404s shows the browser's
-     broken-image glyph (alt="" does not suppress it). Still needed: the four
-     capstone slots (3 methods + Built), currently marked IN PROGRESS. -->
+     Image filenames are prefixed by entry (senior_ = capstone, signals_ =
+     Chang, tetrel_, phantom_/afrl_ = AFRL, fri_ = Big Data in Biology) so
+     provenance stays obvious. Slots with no image yet are either an empty
+     .img-slot (blank bordered box) or .img-slot--note with a text marker —
+     never an <img> pointing at a file that doesn't exist, because a src that
+     404s draws the browser's broken-image glyph and alt="" does not suppress
+     it. Still needed: the four capstone slots (3 methods + Built, marked IN
+     PROGRESS) and the FRI Problem + Built slots (blank). -->
 
 <div class="timeline">
 
@@ -74,6 +76,7 @@ body_class: wide
     <div class="tl-body">
       <h2><span class="tl-ongoing">[ONGOING]</span> Gait-based random forest screen for early cognitive impairment</h2>
       <p class="project-tagline">Undergraduate Researcher · <a href="https://jtkchang.github.io/">Chang Research Team</a> · The University of Texas at Austin</p>
+      <p class="entry-note">Presented poster “Smartphone based gait metrics in naturalistic settings differentiate older adults with and without fall histories” at 2026 Texas Alzheimer’s Research and Care Consortium.</p>
       <div class="progression">
 
         <div class="prog-col">
@@ -173,6 +176,7 @@ body_class: wide
     <div class="tl-body">
       <h2>Multimodal phantom for preclinical-scale MRI validation</h2>
       <p class="project-tagline">Repperger Research Intern · <a href="https://www.afrl.af.mil/711HPW/">Air Force Research Laboratory, 711th Human Performance Wing</a></p>
+      <p class="entry-note">Design in review for potential patent application.</p>
       <div class="progression">
 
         <div class="prog-col">
@@ -209,6 +213,60 @@ body_class: wide
           <p class="prog-head">Built</p>
           <div class="img-slot img-slot--note"><span>CONFIDENTIAL</span></div>
           <p class="prog-text">Multimodal contrast-agent phantom scanned and quantified at preclinical scale.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tl-entry" id="fri">
+    <div class="tl-when">
+      <span class="tl-date">Jun – Aug 2024</span>
+    </div>
+    <div class="tl-body">
+      <h2>SVM and RF classifiers of mood disorders using blood and brain transcriptomic expression</h2>
+      <p class="project-tagline">Freshman Research Initiative Fellow · Big Data in Biology Stream, UT Austin College of Natural Sciences</p>
+      <p class="entry-note">Co-presented poster “Classifying Psychiatric Disorders With Blood and Brain Transcriptomic Expression” at 2025 UT Technology &amp; Science Undergraduate Research Forum.</p>
+      <div class="progression">
+
+        <!-- Empty .img-slot renders as a blank bordered box, which is the
+             intended placeholder here. Do NOT add an <img> pointing at a
+             not-yet-existing file — a src that 404s draws the browser's
+             broken-image glyph, which alt="" does not suppress. The Problem and
+             Built .prog-text paragraphs are omitted until there's copy for them. -->
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot"></div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/fri_methods_bash.png' | relative_url }}" alt=""></div>
+              <span>Bash</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/fri_methods_bioconductor.png' | relative_url }}" alt=""></div>
+              <span>Bioconductor package</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/fri_methods_svm.png' | relative_url }}" alt=""></div>
+              <span>Machine learning</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot"></div>
         </div>
 
       </div>
