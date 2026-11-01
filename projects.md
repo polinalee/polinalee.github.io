@@ -11,10 +11,10 @@ body_class: wide
 
      Image filenames keep their source prefixes (senior_ = capstone,
      signals_ = Chang, tetrel_, phantom_/afrl_ = AFRL) so provenance stays
-     obvious. Slots whose file doesn't exist yet are left pointing at a
-     {slug}-* placeholder name; .img-slot holds the footprint either way.
-     Still needed: capstone-method-1/2/3, capstone-built, chang-problem,
-     tetrel-method-3, afrl-built. -->
+     obvious. Slots with no image yet use .img-slot--note with a text marker
+     instead of an <img>, because a src that 404s shows the browser's
+     broken-image glyph (alt="" does not suppress it). Still needed: the four
+     capstone slots (3 methods + Built), currently marked IN PROGRESS. -->
 
 <div class="timeline">
 
@@ -24,7 +24,7 @@ body_class: wide
     </div>
     <div class="tl-body">
       <h2><span class="tl-ongoing">[ONGOING]</span> Thoracoabdominal phantom for CT- and ultrasound-guided drainage training</h2>
-      <p class="project-tagline">Senior BME Capstone · <a href="https://dellmed.utexas.edu/">Dell Medical School at the University of Texas at Austin</a></p>
+      <p class="project-tagline">VentureWell Stage 1 E-Team Program Technical Lead · <a href="https://dellmed.utexas.edu/">Dell Medical School at the University of Texas at Austin</a></p>
       <div class="progression">
 
         <div class="prog-col">
