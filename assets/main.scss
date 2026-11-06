@@ -241,6 +241,16 @@
   align-items: start;
 }
 
+/* An entry with no role or institution to name carries no .project-tagline, and
+   the h2's own bottom margin is only ~3px — it's the tagline that normally
+   spaces the title off the three-column strip. This puts that gap back when
+   .progression follows the h2 directly, so such an entry doesn't read as
+   cramped beside its neighbours. Deliberately short of the ~49px a one-line
+   tagline yields, since the entry genuinely has less to say up top. */
+.tl-body h2 + .progression {
+  margin-top: 2rem;
+}
+
 .prog-col {
   display: flex;
   flex-direction: column;

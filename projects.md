@@ -169,6 +169,57 @@ body_class: wide
     </div>
   </section>
 
+  <section class="tl-entry" id="3t3">
+    <div class="tl-when">
+      <span class="tl-date">Aug – Dec 2025</span>
+    </div>
+    <div class="tl-body">
+      <!-- No .project-tagline here on purpose: this entry has no role or
+           institution to name. The h2's bottom margin carries the spacing the
+           tagline would otherwise provide. -->
+      <h2>Bounding minoxidil cytotoxicity thresholds on mouse embryonic fibroblasts</h2>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot"></div>
+          <p class="prog-text">Verify literature thresholds for minoxidil cytotoxicity.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/3t3_methods_fibroblast.jpg' | relative_url }}" alt=""></div>
+              <span>3T3 cell culturing</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/3t3_methods_hemocytometer.png' | relative_url }}" alt=""></div>
+              <span>Hemocytometer</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot img-slot--fill"><img src="{{ '/assets/img/3t3_methods_spectrophotometer.jpg' | relative_url }}" alt=""></div>
+              <span>Minoxidil cytotoxicity assay using treptinoin red denoting living cells</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot"><img src="{{ '/assets/img/3t3_built.png' | relative_url }}" alt=""></div>
+          <p class="prog-text">Verified 70–100 μM cytotoxic threshold.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="tl-entry" id="afrl">
     <div class="tl-when">
       <span class="tl-date">Jun – Aug 2025</span>
@@ -219,6 +270,56 @@ body_class: wide
     </div>
   </section>
 
+  <section class="tl-entry" id="ecg">
+    <div class="tl-when">
+      <span class="tl-date">Jan – May 2025</span>
+    </div>
+    <div class="tl-body">
+      <!-- No .project-tagline: no role or institution given for this entry.
+           .tl-body h2 + .progression supplies the gap the tagline would. -->
+      <h2>ECG signal acquisition and filtering device</h2>
+      <div class="progression">
+
+        <div class="prog-col">
+          <p class="prog-head">Problem</p>
+          <div class="img-slot"><img src="{{ '/assets/img/ecg_problem.jpg' | relative_url }}" alt=""></div>
+          <p class="prog-text">Lack of cheap ECG waveform devices compatible with the ELVIS board.</p>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Methods</p>
+          <div class="method-bar">
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/ecg_methods_pcb.png' | relative_url }}" alt=""></div>
+              <span>PCB design</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/ecg_methods_filter.png' | relative_url }}" alt=""></div>
+              <span>Filters, voltage followers, amplifiers</span>
+            </div>
+            <div class="method-item">
+              <div class="img-slot"><img src="{{ '/assets/img/ecg_methods_soldering.png' | relative_url }}" alt=""></div>
+              <span>Soldering</span>
+            </div>
+          </div>
+          <div class="prog-arrow" aria-hidden="true">
+            <span class="prog-arrow-line"></span>
+            <svg class="prog-arrow-head" viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="prog-col">
+          <p class="prog-head">Built</p>
+          <div class="img-slot"><img src="{{ '/assets/img/ecg_built.png' | relative_url }}" alt=""></div>
+          <p class="prog-text">ECG signal acquisition and filtering device containing voltage follower, amplifier, and bandpass filter to interface with National Instruments ELVIS board and LabVIEW Data Acquisition (DAQ) module.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="tl-entry" id="fri">
     <div class="tl-when">
       <span class="tl-date">Jun – Aug 2024</span>
@@ -229,15 +330,10 @@ body_class: wide
       <p class="entry-note">Co-presented poster “Classifying Psychiatric Disorders With Blood and Brain Transcriptomic Expression” at 2025 UT Technology &amp; Science Undergraduate Research Forum.</p>
       <div class="progression">
 
-        <!-- Empty .img-slot renders as a blank bordered box, which is the
-             intended placeholder here. Do NOT add an <img> pointing at a
-             not-yet-existing file — a src that 404s draws the browser's
-             broken-image glyph, which alt="" does not suppress. The Problem and
-             Built .prog-text paragraphs are omitted until there's copy for them. -->
-
         <div class="prog-col">
           <p class="prog-head">Problem</p>
-          <div class="img-slot"></div>
+          <div class="img-slot"><img src="{{ '/assets/img/fri_problem.png' | relative_url }}" alt=""></div>
+          <p class="prog-text">Absence of investigations on relationships between blood biomarkers and brain gene expression for psychiatric disorders.</p>
         </div>
 
         <div class="prog-col">
@@ -252,8 +348,8 @@ body_class: wide
               <span>Bioconductor package</span>
             </div>
             <div class="method-item">
-              <div class="img-slot"><img src="{{ '/assets/img/fri_methods_svm.png' | relative_url }}" alt=""></div>
-              <span>Machine learning</span>
+              <div class="img-slot"><img src="{{ '/assets/img/fri_methods_selection.png' | relative_url }}" alt=""></div>
+              <span>Robust Rank Aggregation feature selection</span>
             </div>
           </div>
           <div class="prog-arrow" aria-hidden="true">
@@ -266,7 +362,8 @@ body_class: wide
 
         <div class="prog-col">
           <p class="prog-head">Built</p>
-          <div class="img-slot"></div>
+          <div class="img-slot"><img src="{{ '/assets/img/fri_built.png' | relative_url }}" alt=""></div>
+          <p class="prog-text">SVM-RFE classifiers attaining 0.93 and 0.78 AUC for 2 psychiatric disorders.</p>
         </div>
 
       </div>
